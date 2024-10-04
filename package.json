@@ -1,14 +1,30 @@
 {
+<<<<<<< HEAD
   "name": "git-day-2-pt-1",
+=======
+  "name": "mtechwebdev",
+>>>>>>> e492ef565d6fa4317be54e2ade2454521d15db1e
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
+<<<<<<< HEAD
   "author": "",
   "license": "ISC",
   "dependencies": {
     "jest": "^26.5.2"
+=======
+  "jest": {
+    "testMatch": [
+      "**/tests/*.js"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+>>>>>>> e492ef565d6fa4317be54e2ade2454521d15db1e
   }
 }
