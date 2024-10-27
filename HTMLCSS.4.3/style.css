@@ -1,31 +1,56 @@
 html, body, div {
   margin: 0;
   padding: 0;
-}
-
-#nav {
+ }
+ 
+ 
+ #nav {
   background-color: #ddf;
   padding: 10px;
   width: 100%;
   text-align: center;
-}
-
-#nav a {
+  position:fixed;
+  z-index: 2;
+ }
+ 
+ 
+ #nav a {
   text-decoration: none;
   color: black;
   padding: 10px;
-}
-
-#absoluteChild {
+ }
+ 
+ 
+ #absoluteChild {
   background-color: #aaf;
   height: 200px;
-}
-
-#firstBox {
+ }
+ 
+ 
+ #firstBox {
   background-color: #bff;
   height: 100px;
   width: 100px;
-}
+  position:absolute;
+  top: 0;
+ }
+ 
+ 
+ #relativeParent {
+  background-color: #ebb;
+  height: 100px;
+  position: relative;
+ }
+ 
+ 
+ #secondBox {
+  background-color: #afb;
+  height: 100px;
+  width: 100px;
+  position:absolute;
+  top: 0;
+ }
+ 
 
 #relativeParent {
   background-color: #ebb;
