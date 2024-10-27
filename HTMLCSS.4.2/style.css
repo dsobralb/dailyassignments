@@ -1,24 +1,37 @@
 #leftSide {
   padding: 20px;
   background-color: #def;
-}
-
-#rightSide {
+  float: left;
+ }
+ 
+ 
+ #rightSide {
   padding: 20px;
   background-color: #fde;
-}
-
-#problem2 {
-  
-}
-
-#cardsContainer {
-  
-}
-
-.card {
+  float: right;
+ }
+ 
+ 
+ 
+ 
+ #problem2 {
+  clear:both;
+ }
+ 
+ 
+ #cardsContainer {
+  text-align: center;
+ }
+ 
+ 
+ .card {
   padding: 20px;
   background-color: #dfd;
   margin-right: 10px;
   margin-top: 10px;
-}
+  float: left;
+  display: inline-block;
+ }
+ 
+ 
+ 
