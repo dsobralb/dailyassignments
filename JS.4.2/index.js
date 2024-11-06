@@ -1,7 +1,5 @@
 // Problem 1
-// Below we have a currency object.
-// Create a string in myCurrency using this object that says:
-// 'I have (insert euro here)200 which is (insert yen here)23,718.09 and (insert usd here)218.84'
+// Create a string in myCurrency using values from the currency object.
 
 let currency = {
   usd: '$',
@@ -9,17 +7,12 @@ let currency = {
   yen: '¥'
 };
 
-let myCurrency;
+let myCurrency = `I have ${currency.euro}200 which is ${currency.yen}23,718.09 and ${currency.usd}218.84`;
+console.log(myCurrency);
 
 
 // Problem 2
-// We have a very successful company with the incomes of three months below.
-// Our total income value is not right.
-// Add all the months incomes together into the total variable
-// Then reassign the totalIncome value in the companyIncome object with 
-// the total variable.
-// Note: Do not copy any paste the numbers. Access each number individually through
-// the object.
+// Add the monthly incomes and update totalIncome in the companyIncome object.
 
 let companyIncome = {
   january: 987423,
@@ -28,14 +21,13 @@ let companyIncome = {
   totalIncome: 4357346
 };
 
-let total;
+let total = companyIncome.january + companyIncome.february + companyIncome.march;
+companyIncome.totalIncome = total;
+console.log(companyIncome);
 
 
 // Problem 3
-// Here we have a college object with some info about each graduating class
-// in the next couple of years.
-// Practice accessing an object within an object.
-// Add the students in each class together into the students variable.
+// Add the number of students in each class together.
 
 let college = {
   students: 23432,
@@ -50,19 +42,18 @@ let college = {
   graduationRatePercent: 70 
 };
 
-let students;
+let students = college.classOf21.students + college.classOf22.students;
+console.log(students);
 
 
 // Problem 4
-// Here we have a mathEquations object
-// in our 'first' variable use the pow4 function for the number 7
-// in our 'second' variable use the addThree function for 3213,3543 and 12365
+// Use the pow4 function and addThree function from the mathEquations object.
 
 let mathEquations = {
-  addTwo: function(a,b) {
+  addTwo: function(a, b) {
     return a + b;
   },
-  addThree: function(a,b,c) {
+  addThree: function(a, b, c) {
     return a + b + c;
   },
   pow4: function(num) {
@@ -70,13 +61,14 @@ let mathEquations = {
   }
 };
 
-let first;
-let second;
+let first = mathEquations.pow4(7);  // 7 to the power of 4
+let second = mathEquations.addThree(3213, 3543, 12365);  // Sum of three numbers
+console.log(first);
+console.log(second);
 
 
 // Problem 5
-// Use our positiveExponent function and assign the value to the answer variable
-// Use the values 5 as the base and 3 as the power.
+// Use the positiveExponent function with base 5 and power 3.
 
 let mathInfo = {
   exponent: 'a quantity representing the power to which a given number or expression is to be raised, usually expressed as a raised symbol beside the number or expression',
@@ -85,11 +77,12 @@ let mathInfo = {
     positiveExponent: function(base, power) {
       let total = base;
       for(let i = 1; i < power; i++) {
-        total*=base;
+        total *= base;
       }
       return total;
     }
   }
 };
 
-let answer;
+let answer = mathInfo.equation.positiveExponent(5, 3);  // 5 to the power of 3
+console.log(answer);
