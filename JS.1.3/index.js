@@ -1,3 +1,4 @@
+
 // 1) Calculate the perimeter of the yard
 let yardWidth = 100;
 let yardLength = 15;
