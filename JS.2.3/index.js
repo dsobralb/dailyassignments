@@ -1,20 +1,25 @@
-// Go to the instructions file first!!
-
 //-----------------
 // Problem 1
 //-----------------
 
 // I will give you a color through the 'color' parameter.
 // We want to know if the color is either 'green' or 'yellow'.
-// If its 'green' or 'yellow' have favGreenOrYellow be true.
+// If it's 'green' or 'yellow' have favGreenOrYellow be true.
 
 let favGreenOrYellow = false;
 function problem1(color) {
-  //write code here
-  if(color == "green" || color == "yellow") favGreenOrYellow = true;
+  // Check if the color is 'green' or 'yellow'
+  if (color === "green" || color === "yellow") {
+    favGreenOrYellow = true;
+  }
   
-  
+  console.log(`Favorite is Green or Yellow: ${favGreenOrYellow}`);
 }
+
+// Test examples
+problem1("green");    // Should output: Favorite is Green or Yellow: true
+problem1("blue");     // Should output: Favorite is Green or Yellow: false
+
 
 //-----------------
 // Problem 2
@@ -29,10 +34,18 @@ function problem1(color) {
 
 let validInput = false;
 function problem2(guess) {
-  //write code here
-  if(guess > 0 && guess <= 100) validInput = true;
+  // Check if guess is between 1 and 100
+  if (guess > 0 && guess <= 100) {
+    validInput = true;
+  }
   
+  console.log(`Valid input: ${validInput}`);
 }
+
+// Test examples
+problem2(50);     // Should output: Valid input: true
+problem2(150);    // Should output: Valid input: false
+problem2(0);      // Should output: Valid input: false
 
 
 //-----------------
@@ -47,8 +60,16 @@ function problem2(guess) {
 
 let favGreenOrYellowWithHex = false;
 function problem3(color) {
-  //write code here
-  if(color == "yellow" || color == "#ffff00" || color == "green" || color == "#00ff00"){
+  // Check if color is 'green', 'yellow', '#00ff00', or '#ffff00'
+  if (color === "yellow" || color === "#ffff00" || color === "green" || color === "#00ff00") {
     favGreenOrYellowWithHex = true;
   }
+  
+  console.log(`Favorite is Green or Yellow (with hex): ${favGreenOrYellowWithHex}`);
 }
+
+// Test examples
+problem3("green");       // Should output: Favorite is Green or Yellow (with hex): true
+problem3("#00ff00");     // Should output: Favorite is Green or Yellow (with hex): true
+problem3("blue");        // Should output: Favorite is Green or Yellow (with hex): false
+problem3("#ff0000");     // Should output: Favorite is Green or Yellow (with hex): false
