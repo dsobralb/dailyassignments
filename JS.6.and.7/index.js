@@ -1,13 +1,19 @@
-function randomWords() {
-    let words = ['stuff', 'sugar', 'sweet', 'happy', 'money', 'cat', 'make'];
-    let index = Math.floor(Math.random() * words.length);
-    return words[index];
-}
-
-//Random word selected
+// Random word selected
 let theWord = randomWords();
 
-//click run a few times to see this in action then delete this line of code.
-console.log(theWord);
+// Example 1: Check if the word is "happy" and print a message
+if (theWord === 'happy') {
+  console.log("The word is 'happy'! Spread the joy!");
+} else {
+  console.log(`The word is '${theWord}'.`);
+}
 
-//Write your code here.
+// Example 2: Print the word in uppercase
+console.log(`The word in uppercase is: ${theWord.toUpperCase()}`);
+
+// Example 3: Check if the word has more than 4 letters
+if (theWord.length > 4) {
+  console.log(`The word '${theWord}' has more than 4 letters.`);
+} else {
+  console.log(`The word '${theWord}' has 4 or fewer letters.`);
+}
