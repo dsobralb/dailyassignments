@@ -1,26 +1,15 @@
-// 1) I need a fence around my yard now. Help me find the perimeter.
-// Perimeter is width + with + length + length
-
+// 1) Calculate the perimeter of the yard
 let yardWidth = 100;
 let yardLength = 15;
+let yardPerimeter = yardWidth + yardWidth + yardLength + yardLength; // Result: 230
 
-let yardPerimeter;
+// 2) Create a message with the yard perimeter using string interpolation
+let messagePerimeter = `You are going to need ${yardPerimeter}ft of fence.`;
 
-
-// 2) With the yardPerimeter variable go ahead and use back ticks (``)
-// with string interpolation (${}) to put the following message
-// in the messagePerimeter variable -->
-// 'You are going to need (insert perimeter here)ft of fence'.
-// Don't remember how to do this? Go back to the first repl.it assignment from today
-// and look at the example problems console.log().
-
-let messagePerimeter;
-
-// 3)One last thing. It is going to cost me $15 per foot of fence.
-// What is the total price I am going to have to pay?
-// Use the yardPerimeter variable and the pricePerFoot variable
-// to find the total price and put that value in the totalPrice variable.
-
+// 3) Calculate the total price of the fence
 let pricePerFoot = 15;
+let totalPrice = yardPerimeter * pricePerFoot; // Result: 3450
 
-let totalPrice;
+// Console output to verify results
+console.log(messagePerimeter); // "You are going to need 230ft of fence."
+console.log(`Total price: $${totalPrice}`); // "Total price: $3450"
