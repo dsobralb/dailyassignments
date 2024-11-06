@@ -1,4 +1,4 @@
-// 1) Demonstrate the 3 different types of variables that can be used.
+//1) Demonstrate the 3 different types of variables that can be used.
 let aLet = 10;         // Using let
 const aConst = 20;     // Using const
 var aVar = 30;         // Using var
