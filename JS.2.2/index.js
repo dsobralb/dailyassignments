@@ -1,56 +1,26 @@
-//Go to the instructions file first thing!
-
-//--------------------
-// Example Problem
-//--------------------
-
-// I will be giving you a color. You can access the color from the 'color' parameter
-// If the color is 'blue' have the variable 'blueIsFavorite' be true.
-// If any other color is entered have the variable 'blueIsFavorite' be false.
-
-
-let blueIsFavorite = false;
-function example(color) {
-  //write code here
-  
-  if(color === "blue") {
-    blueIsFavorite = true;
-  } else {
-    blueIsFavorite = false;
-  }
-  
-  
-  
-  console.log(`blue is favorite: ${blueIsFavorite}`);
-}
-
-// Here we are running the function with "blue" being stored into the color parameter variable
-example("blue");
-
-// Here we are running the function with "yellow" being stored into the color parameter
-example("yellow");
-
-
-
 //--------------------
 // Problem 1
 //--------------------
 
-// Lets do a similar problem as the example problem. 
 // I will be giving you a color through the 'color' parameter. 
 // If the color is 'red' have the variable 'redIsFavorite' be true.
 // If any other color is entered have the variable 'redIsFavorite' be false.
 
-
 let redIsFavorite = false;
 function problem1(color) {
-  //write code here
-  
-  
+  // Check if color is 'red'
+  if(color === "red") {
+    redIsFavorite = true;
+  } else {
+    redIsFavorite = false;
+  }
   
   console.log(`Red is favorite: ${redIsFavorite}`);
 }
 
+// Test examples
+problem1("red");     // Should output: Red is favorite: true
+problem1("blue");    // Should output: Red is favorite: false
 
 
 //--------------------
@@ -62,15 +32,24 @@ function problem1(color) {
 // If the number is 0 assign typeNumber the string 'zero'
 // If the number is less than 0 assign typeNumber the string 'negative'
 
-
-let typeNumber = false;
+let typeNumber = "";
 function problem2(someNumber) {
-  //write code here
-
+  // Check if number is positive, zero, or negative
+  if (someNumber > 0) {
+    typeNumber = "positive";
+  } else if (someNumber === 0) {
+    typeNumber = "zero";
+  } else {
+    typeNumber = "negative";
+  }
   
-  
-  console.log(`bigNumber: ${typeNumber}`);
+  console.log(`typeNumber: ${typeNumber}`);
 }
+
+// Test examples
+problem2(5);    // Should output: typeNumber: positive
+problem2(0);    // Should output: typeNumber: zero
+problem2(-3);   // Should output: typeNumber: negative
 
 
 //--------------------
@@ -82,11 +61,25 @@ function problem2(someNumber) {
 // You then need to assign the correct percent respectivly to the percentGrade variable.
 // '100%', '80%', '70%', '60%', '0%'.
 
-
 let percentGrade;
 function problem3(grade) {
-  //write code here
+  // Assign corresponding percent based on the grade
+  if (grade === 'a') {
+    percentGrade = '100%';
+  } else if (grade === 'b') {
+    percentGrade = '80%';
+  } else if (grade === 'c') {
+    percentGrade = '70%';
+  } else if (grade === 'd') {
+    percentGrade = '60%';
+  } else if (grade === 'f') {
+    percentGrade = '0%';
+  }
   
-  
-  
+  console.log(`percentGrade: ${percentGrade}`);
 }
+
+// Test examples
+problem3('a');    // Should output: percentGrade: 100%
+problem3('c');    // Should output: percentGrade: 70%
+problem3('f');    // Should output: percentGrade: 0%
