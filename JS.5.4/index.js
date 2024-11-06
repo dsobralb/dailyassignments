@@ -1,94 +1,95 @@
 // Problem 1
-// Below we have an array of objects.
-// Loop through the array of objects and add up all the prices if the
-// item is in stock.
-// Must use forEach on shoppingCart
-// Have the totalPrice function return the total price
-// DO NOT modify the original shoppingCart array. The tests will not pass If
-// you do so.
+// Calculate the total price of in-stock items in the shoppingCart array.
 
 let shoppingCart = [
-    {
-      itemName: "TV",
-      inStock: true,
-      price: 799.99,
-    },
-    {
-      itemName: "Controller",
-      inStock: true,
-      price: 49.99,
-    },
-    {
-      itemName: "Phone case",
-      inStock: false,
-      price: 19.99,
-    },
-    {
-      itemName: "Pencils",
-      inStock: true,
-      price: 5.99,
-    }
-  ];
+  {
+    itemName: "TV",
+    inStock: true,
+    price: 799.99,
+  },
+  {
+    itemName: "Controller",
+    inStock: true,
+    price: 49.99,
+  },
+  {
+    itemName: "Phone case",
+    inStock: false,
+    price: 19.99,
+  },
+  {
+    itemName: "Pencils",
+    inStock: true,
+    price: 5.99,
+  }
+];
 
 function totalPrice() {
-  //write code here
-  
-  
+  let total = 0;  // Initialize total to store the sum of prices of in-stock items
+
+  shoppingCart.forEach(item => {
+    if (item.inStock) {      // Check if item is in stock
+      total += item.price;   // Add item price to total
+    }
+  });
+
+  return total; // Return the total price of in-stock items
 }
+
+console.log(totalPrice()); // Expected output: 855.97
 
 
 // Problem 2
-// We have an array of items in a store.
-// The manager needs to know which items are in stock.
-// Use forEach to loop through our array of objects.
-// Create a new array with ONLY the name of each item
-// that is in stock. Hint: You are going to need to 
-// create a new array and PUSH each item name to the 
-// end of the array.
-// Do not modify the original shopItems array.
-// The tests will not pass if you do so.
+// Create an array of item names that are in stock from the shopItems array.
 
 const shopItems = [
-    {
-      itemName: "TV",
-      inStock: true,
-      price: 799.99,
-    },
-    {
-      itemName: "Controller",
-      inStock: true,
-      price: 49.99,
-    },
-    {
-      itemName: "Phone case",
-      inStock: false,
-      price: 19.99,
-    },
-    {
-      itemName: "Pencils",
-      inStock: true,
-      price: 5.99,
-    },
-    {
-      itemName: "Game Console",
-      inStock: true,
-      price: 250.00,
-    },
-    {
-      itemName: "Laptop",
-      inStock: false,
-      price: 1000.00,
-    },
-    {
-      itemName: "Movie",
-      inStock: true,
-      price: 20.00,
-    },
-  ];
+  {
+    itemName: "TV",
+    inStock: true,
+    price: 799.99,
+  },
+  {
+    itemName: "Controller",
+    inStock: true,
+    price: 49.99,
+  },
+  {
+    itemName: "Phone case",
+    inStock: false,
+    price: 19.99,
+  },
+  {
+    itemName: "Pencils",
+    inStock: true,
+    price: 5.99,
+  },
+  {
+    itemName: "Game Console",
+    inStock: true,
+    price: 250.00,
+  },
+  {
+    itemName: "Laptop",
+    inStock: false,
+    price: 1000.00,
+  },
+  {
+    itemName: "Movie",
+    inStock: true,
+    price: 20.00,
+  }
+];
 
 function inStockItems() {
-  //write code here
-  
-  //return the array of in stock items
-  
+  let inStockNames = []; // Initialize an array to store names of in-stock items
+
+  shopItems.forEach(item => {
+    if (item.inStock) {        // Check if item is in stock
+      inStockNames.push(item.itemName); // Add item name to the inStockNames array
+    }
+  });
+
+  return inStockNames; // Return the array of in-stock item names
 }
+
+console.log(inStockItems()); // Expected output: ["TV", "Controller", "Pencils", "Game Console", "Movie"]
