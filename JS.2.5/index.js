@@ -1,47 +1,30 @@
-// Go back to the previous assignment for the syntax of a basic for loop if you need it.
-
-// This time we want to iterate through 0 to 19 (20 times) instead of 0 to 9.
-// Same as the last assignment we have our addTo variable where
-// the iterator will be added to each loop.
-
 let addTo;
 function adding(num) {
   addTo = num;
-  //Code here
-  
-  
+  for (let i = 0; i < 20; i++) {
+    addTo += i;  // Adds each `i` from 0 to 19 to `addTo`
+  }
+  console.log(`Final value of addTo: ${addTo}`);
 }
 
-
-//Create a for loop that iterates through 20 to 29.
-//Add the iterator to the anotherAdd variable each loop.
-
+adding(5);  // Starting with 5, adds 0 through 19 to it
 let anotherAdd;
 function adding1(num) {
   anotherAdd = num;
-  //Code here
-  
-  
+  for (let i = 20; i < 30; i++) {
+    anotherAdd += i;  // Adds each `i` from 20 to 29 to `anotherAdd`
+  }
+  console.log(`Final value of anotherAdd: ${anotherAdd}`);
 }
 
-
-// Now we want a loop that adds to our variable moreAdding.
-// This time we want it to add every 5th number starting at 0
-// all the way to 100. ex. 0,5,10,15,20,25,etc.
-// variable + 0
-// variable + 5
-// variable + 10
-// all the way to 100
-// Unsure how to do this? Keep in mind our iterator(i) has always
-// gone up by one each loop so far. How could we make the iterator(i)
-// go up by 5 each loop?
-// You could also consider using the modulus operator:
-// https://riptutorial.com/javascript/example/760/remainder---modulus----
-
+adding1(10);  // Starting with 10, adds 20 through 29 to it
 let moreAdding;
 function adding2(num) {
   moreAdding = num;
-  //write code here
-  
-  
+  for (let i = 0; i <= 100; i += 5) {
+    moreAdding += i;  // Adds each `i` (0, 5, 10, ..., 100) to `moreAdding`
+  }
+  console.log(`Final value of moreAdding: ${moreAdding}`);
 }
+
+adding2(0);  // Starting with 0, adds 0, 5, 10, ..., 100 to it
