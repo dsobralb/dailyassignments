@@ -1,4 +1,4 @@
-// 1) Subtract startDistance from endDistance and assign the result to distanceTraveled
+//1) Subtract startDistance from endDistance and assign the result to distanceTraveled
 let startDistance = 3;
 let endDistance = 22;
 let distanceTraveled = endDistance - startDistance; // Result: 19
